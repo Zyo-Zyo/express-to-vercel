@@ -33,5 +33,11 @@ router.post('/',jsonParser, async (req, res) => {
     });
 })
 
+app.get('/tojson', (req, res) => {
+  var jsontext = req.query.text;
+  var a = JSON.parse(jsontext);
+  res.json(a)
+})
+
 
 module.exports.router = router;
